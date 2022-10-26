@@ -1,0 +1,156 @@
+
+deprecated_labels = ["enhancement"]
+
+required_topics = ["aws-amplify"]
+
+topics = [
+    "aws-amplify",
+    "serverless",
+    "aws",
+    "fullstack",
+    "graphql",
+    "web-development",
+]
+
+
+repo_health_items = [
+    "code_of_conduct",
+    "code_of_conduct_file",
+    "contributing",
+    "pull_request_template",
+    "license",
+    "readme",
+]
+
+[[orgs]]
+name = "aws-amplify"
+[[orgs.repositories]]
+name = "amplify-cli"
+label = "CLI"
+
+[[orgs.repositories]]
+name = "amplify-js"
+label = "JS"
+
+
+[[orgs.repositories]]
+name = "amplify-ui"
+label = "UI"
+
+[[orgs.repositories]]
+name = "amplify-hosting"
+label = "Hosting"
+
+[[orgs.repositories]]
+name = "amplify-category-api"
+label = "API"
+
+[[orgs.repositories]]
+name = "amplify-codegen"
+label = "Codegen"
+
+
+[[orgs.repositories]]
+name = "amplify-adminui"
+label = "AdminUI"
+
+[[orgs.repositories]]
+name = "amplify-flutter"
+label = "Flutter"
+
+[[orgs.repositories]]
+name = "amplify-swift"
+label = "Swift"
+
+
+[[orgs.repositories]]
+name = "amplify-android"
+label = "Android"
+
+[[orgs.repositories]]
+name = "docs"
+label = "Docs"
+
+[[orgs.repositories]]
+name = "amplify-learn"
+label = "Learn"
+
+[[orgs.repositories]]
+name = "aws-appsync-realtime-client-ios"
+label = "AppSync Realtime Cient iOS"
+
+[[orgs.repositories]]
+name = "aws-sdk-ios-spm"
+label = "SPM (AWS SDK for iOS)"
+
+[[orgs.repositories]]
+name = "aws-sdk-android"
+label = "AWS SDK for Android"
+
+[[orgs.repositories]]
+name = "aws-sdk-ios"
+label = "AWS SDK for iOS"
+
+[[orgs]]
+name = "awslabs"
+[[orgs.repositories]]
+name = "aws-mobile-appsync-sdk-android"
+label = "Android SDK for AWS AppSync"
+
+[[orgs.repositories]]
+name = "aws-mobile-appsync-sdk-ios"
+label = "iOS SDK for AWS AppSync"
+
+
+[[labels]]
+label = "transferred"
+color = "f9d0c4"
+description = "This issue was transferred from another Amplify project"
+
+[[labels]]
+label = "question"
+color = "cc317c"
+description = "General question"
+
+
+[[labels]]
+label = "feature-request"
+color = "6f8dfc"
+description = "Request a new feature"
+
+
+[[labels]]
+label = "investigating"
+color = "A7D5AA"
+description = "This issue is being investigated"
+
+[[labels]]
+label = "bug"
+color = "d73a4a"
+description = "Something isn't working"
+
+[[labels]]
+label = "pending-response"
+color = "f477a5"
+description = "Issue is pending response from the issue requestor"
+
+[[labels]]
+label = "pending-triage"
+color = "fef2c0"
+description = "Issue is pending triage"
+
+
+[[labels]]
+label = "not-reproducible"
+color = "c2e0c6"
+description = "Not able to reproduce the issue"
+
+[[labels]]
+label = "pending-release"
+color = "F8E3A2"
+description = "Code has been merged but pending release"
+
+[[labels]]
+label = "good first issue"
+color = "7057ff"
+description = "Good for newcomers"
