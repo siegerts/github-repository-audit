@@ -67,7 +67,5 @@ pip install -r requirements.txt
 ```
 
 4. Add a GitHub token in the `.env` file
-
-5 .Update the `audit_config.toml` file
-
+5. Update the `audit_config.toml` file
 6. Run `streamlit run app.py`
