@@ -41,7 +41,7 @@ Utilities and configurations to help develop consistency in communication and ex
 
 - Code Owners
 - Issue templates
-  - Examples can be found in the Amplify CLI repo (issue (https://github.com/aws-amplify/amplify-cli/issues/new?assignees=&labels=&template=1.bug_report.yaml), feature request (https://github.com/aws-amplify/amplify-cli/issues/new?assignees=&labels=feature-request&template=2.feature_request.yaml))
+  - Examples can be found in the Amplify CLI repo ([issue](https://github.com/aws-amplify/amplify-cli/issues/new?assignees=&labels=&template=1.bug_report.yaml), [feature-request](https://github.com/aws-amplify/amplify-cli/issues/new?assignees=&labels=feature-request&template=2.feature_request.yaml))
 - Suggested GH Actions
 
 ## Development
