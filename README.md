@@ -1,6 +1,6 @@
 # GitHub Repository Audit Tool
 
-The audit dashboard provides a _declarative_ approach to managing repository changes over time for current and future projects in a GitHub organization. It's built using [Streamlit](https://www.streamlit.io).
+The audit dashboard provides a _declarative_ approach to managing repository changes over time for current and future projects in a GitHub organization. It's built using [Streamlit](https://www.streamlit.io) and can be configured for multiple organizations and repositories within those organizations.
 
 ![](https://github.com/siegerts/github-repository-audit/blob/main/audit-dashboard.png)
 
