@@ -77,7 +77,51 @@ The following configurations can be set adjusted in the `audit_config.toml`.
 | Name | Description | Example |
 | ---- | ----------- | ------- |
 
-\
+|`deprecated_labels`|Existing labels that are no longer used|`["enhancement"]`|
+|`required_topics`|Required repository marketing topics|`["aws-amplify"]`|
+|`topics`|Additional topic suggestions|`["aws-amplify","serverless",]`|
+|`repo_health_items`|Settings and files that help facilitate OSS contributions|`["code_of_conduct","code_of_conduct_file","contributing","pull_request_template","license","readme", ]`|
+
+### Organizations & repos
+
+For example:
+
+```
+[[orgs]]
+name = "aws-amplify"
+[[orgs.repositories]]
+name = "amplify-cli"
+label = "CLI"
+
+[[orgs.repositories]]
+name = "amplify-js"
+label = "JS"
+
+[[orgs.repositories]]
+name = "amplify-ui"
+label = "UI"
+```
+
+### Required labels
+
+For example:
+
+```
+[[labels]]
+label = "transferred"
+color = "f9d0c4"
+description = "This issue was transferred from another Amplify project"
+
+[[labels]]
+label = "question"
+color = "cc317c"
+description = "General question"
+
+[[labels]]
+label = "feature-request"
+color = "6f8dfc"
+description = "Request a new feature"
+```
 
 ## Deployment options
 
