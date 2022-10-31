@@ -15,6 +15,7 @@ config = toml.load("audit_config.toml")
 load_dotenv()
 
 token = os.getenv("GH_TOKEN")
+deployed = os.getenv("DEPLOYED")
 
 if token is None:
     raise ValueError("GH_TOKEN not found in .env")
@@ -31,6 +32,15 @@ required_labels.sort(key=lambda label: label["label"])
 
 deprecated_labels = config.get("deprecated_labels", [])
 deprecated_labels.sort()
+
+if deployed:
+    # hide menu
+    hide_menu_style = """
+        <style>
+            #MainMenu {visibility: hidden;}
+        </style>
+        """
+    st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 
 ###################
@@ -182,7 +192,6 @@ if selected_org and repo:
     present_labels = []
 
     for i, label in enumerate(req_labels):
-
         try:
             idx = repo_labels.index(label)
             present_labels.append(required_labels[i])
@@ -199,7 +208,9 @@ if selected_org and repo:
 
             if color_flag:
                 notes += f"Color needs changed to **{required_labels[i]['color'].lower()}**. "
+
             desc_flag = labels.values[idx][2] != required_labels[i]["description"]
+
             if desc_flag:
                 notes += f"Description needs changed to **{required_labels[i]['description']}**."
 
@@ -271,11 +282,6 @@ if selected_org and repo:
 
     """
     )
-    contrib_labels = gh.get_open_for_contrib_issues(selected_org, repo)
-
-    contrib_md = """
-| Label | Issue Count |\n \
-|-------|-------------|\n"""
 
     st.markdown("\n")
     st.markdown(
@@ -283,6 +289,12 @@ if selected_org and repo:
     _More about [Good First Issues](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)._
     """
     )
+
+    contrib_md = """
+| Label | Issue Count |\n \
+|-------|-------------|\n"""
+
+    contrib_labels = gh.get_open_for_contrib_issues(selected_org, repo, deployed)
 
     for k, v in contrib_labels.items():
         contrib_md += f"| `{k}` | {v} |\n"
