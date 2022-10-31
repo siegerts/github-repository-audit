@@ -74,13 +74,12 @@ pip install -r requirements.txt
 
 The following configurations can be set adjusted in the `audit_config.toml`.
 
-| Name | Description | Example |
-| ---- | ----------- | ------- |
-
-|`deprecated_labels`|Existing labels that are no longer used|`["enhancement"]`|
-|`required_topics`|Required repository marketing topics|`["aws-amplify"]`|
-|`topics`|Additional topic suggestions|`["aws-amplify","serverless",]`|
-|`repo_health_items`|Settings and files that help facilitate OSS contributions|`["code_of_conduct","code_of_conduct_file","contributing","pull_request_template","license","readme", ]`|
+| Name                | Description                                               | Example                                                                                                  |
+| ------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `deprecated_labels` | Existing labels that are no longer used                   | `["enhancement"]`                                                                                        |
+| `required_topics`   | Required repository marketing topics                      | `["aws-amplify"]`                                                                                        |
+| `topics`            | Additional topic suggestions                              | `["aws-amplify","serverless",]`                                                                          |
+| `repo_health_items` | Settings and files that help facilitate OSS contributions | `["code_of_conduct","code_of_conduct_file","contributing","pull_request_template","license","readme", ]` |
 
 ### Organizations & repos
 
