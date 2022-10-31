@@ -239,8 +239,8 @@ if selected_org and repo:
         """
         )
         missing_md = """
-    | Label | Swatch | Color | Description | In Repo |\n\
-    |-------|--------|-------|-------------|---------|\n"""
+| Label | Swatch | Color | Description | In Repo |\n\
+|-------|--------|-------|-------------|---------|\n"""
 
         for label in missing_labels:
             similar = [
