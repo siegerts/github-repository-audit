@@ -4,6 +4,8 @@ The audit dashboard provides a _declarative_ approach to managing repository cha
 
 ![](https://github.com/siegerts/github-repository-audit/blob/main/audit-dashboard.png)
 
+## Focus areas
+
 ### Repository meta information
 
 - Homepage link
