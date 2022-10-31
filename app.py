@@ -71,7 +71,7 @@ repo = selected_repo["name"] or ""
 if selected_org and repo:
 
     ###################
-    #      heading    #
+    #      Heading    #
     ###################
 
     st.title("GitHub Repository Health 📊")
@@ -99,7 +99,7 @@ if selected_org and repo:
         st.markdown("🚨 There isn't a license file in this repo.")
 
     ###################
-    #      health     #
+    #      Health     #
     ###################
 
     st.subheader("Repo health")
