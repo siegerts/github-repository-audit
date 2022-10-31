@@ -24,14 +24,14 @@ repo_health_items = [
 
 [[orgs]]
 name = "aws-amplify"
-[[orgs.repositories]]
-name = "amplify-cli"
-label = "CLI"
 
 [[orgs.repositories]]
 name = "amplify-js"
 label = "JS"
 
+[[orgs.repositories]]
+name = "amplify-cli"
+label = "CLI"
 
 [[orgs.repositories]]
 name = "amplify-ui"

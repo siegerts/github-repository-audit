@@ -15,7 +15,7 @@ config = toml.load("audit_config.toml")
 load_dotenv()
 
 token = os.getenv("GH_TOKEN")
-deployed = os.getenv("DEPLOYED")
+deployed = bool(os.getenv("DEPLOYED", False))
 
 if token is None:
     raise ValueError("GH_TOKEN not found in .env")
@@ -108,8 +108,6 @@ if selected_org and repo:
     # issue_template identified in Ops section
     repo_health_items = config.get("repo_health_items", [])
 
-    repo_meta_items = ["homepage"]
-
     if repo_meta["homepage"].values[0]:
         st.markdown(f"✅ [Homepage link]({repo_meta['homepage'].values[0]})")
     else:
@@ -140,15 +138,15 @@ if selected_org and repo:
     )
 
     required_topics = config.get("required_topics", [])
-
     topic_suggestions = ""
     missing_topics = set(required_topics) - set(topics)
+
     if missing_topics:
-        topic_suggestions = f"The project is missing the following topic(s): {(', ').join(missing_topics)}"
+        topic_suggestions = f"The project is missing the following topic(s): {(', ').join(missing_topics)}."
 
     if len(topics) < 6:
         topic_suggestions += (
-            "Consider adding some more topics to help make the project stand out. "
+            "Consider adding some more topics to help make the project stand out."
         )
 
     if topics:
@@ -158,7 +156,7 @@ if selected_org and repo:
         st.error(
             f"""
     🚨 The repository **doesn't** have any topics listed.
-    Some common topics across Amplify projects include {', '.join(['`{}`'.format(t) for t in common_topics])}...
+    Some common topics across projects include {', '.join(['`{}`'.format(t) for t in common_topics])}...
     """
         )
 
@@ -377,7 +375,7 @@ if selected_org and repo:
     expander.markdown(
         """
         [Structured issue forms](https://gh-community.github.io/issue-template-feedback/welcome/) \
-        are a GitHub Beta program. The feature is now available to all **public** GitHub repos.
+        are available in all **public** GitHub repos.
 
         Examples can be found in the Amplify CLI repo ([issue](https://github.com/aws-amplify/amplify-cli/issues/new?assignees=&labels=&template=1.bug_report.yaml),
         [feature request](https://github.com/aws-amplify/amplify-cli/issues/new?assignees=&labels=feature-request&template=2.feature_request.yaml))
